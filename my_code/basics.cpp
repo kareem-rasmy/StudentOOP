@@ -76,13 +76,13 @@ int my_abs(int n) {
  * Sum from 0 to n using a `while` loop.
  * */
 int sum(int n) {
-    int i = 0;
+    int total = 0;
     int count = 0;
     while (count != n){
-    	i = i + count;
+    	total = total + count;
     	count ++;
     }
-    return i;
+    return total;
 }
 
 /*
