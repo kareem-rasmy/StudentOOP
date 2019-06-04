@@ -1,7 +1,7 @@
 #include <cassert>
 #include <iostream>
 
-#include "../../../class_04_DUI/src/my_code/pointers.h"
+#include "../my_code/pointers.h"
 
 using namespace std;
 
