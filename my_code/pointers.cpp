@@ -1,4 +1,4 @@
-#include "../../../class_04_DUI/src/my_code/pointers.h"
+#include "pointers.h"
 
 #include <iostream>
 
