@@ -49,10 +49,22 @@ void delete_all_things(Thing** things, int n) {
 }
 
 
-void assignTA(Student& s, Student& ta) {
+void assignTA(Student* s, Student* ta) {
+	s->ta = ta;
 }
 
-void printTAs(vector<Student> students) {
+/*
+ * Print who has which TA.
+ * */
+void printTAs(vector<Student*>& students) {
+	for (Student* stud: students){
+		if( stud->ta == nullptr){
+			cout << stud -> name<< " does not have a TA" << endl;
+		}
+		else{
+			cout << stud -> name<< " has " << stud->ta->name << " as a TA" << endl;
+		}
+	}
 }
 
 
