@@ -2,7 +2,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "../my_code/basics.h"
+
+#include "../../../class_02/src/my_code/basics.h"
 
 using namespace std;
 
