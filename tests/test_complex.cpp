@@ -34,15 +34,10 @@ int main() {
 
     // see if `Complex` addition works:
     Complex c3 = c1 + c2;
-    cout << "Initial C3:" << c3 << endl;
-    cout << "Initial C2:" << c2 << endl;
-    cout << "Initial C1:" << c1 << endl;
     assert(c3.get_real() > 43.2);
     // see if `Complex` subtraction works:
     c3 -= c2;
-    cout << "C3 equals:" << c3 << endl;
-    assert(c3 == c1);
-
+    assert(c1 == c3);
     Complex c4 = Complex();
     // test pre-increment:
     ++c4;
