@@ -1,16 +1,23 @@
 #include <iostream>
 #include <istream>
 #include <iomanip>
+#include <cassert>
+#include <cmath>
 #include "complex.h"
 
 using namespace std;
 
+
+
 bool operator== (const Complex& c1, const Complex& c2) {
 	double c1_real = c1.get_real();
-	double c1_imag = c1.get_imag();
 	double c2_real = c2.get_real();
+	double c1_imag = c1.get_imag();
 	double c2_imag = c2.get_imag();
-	if (c1_real == c2_real && c1_imag == c2_imag){
+
+	double dif_real = abs(c1_real - c2_real);
+	double dif_imag = abs(c1_imag - c2_imag);
+	if (dif_real < .001 && dif_imag < .001){
 		return true;
 	}
 	else{
@@ -38,7 +45,7 @@ bool operator!= (const Complex& c1, const Complex& c2){
     * sign for positive numbers.
     * */
 ostream& operator<< (ostream& os, const Complex& c) {
-	os << "Real: " << c.real << "Imaginary: " << c.imag << endl;
+	os << "Real: "<<setprecision(10) << c.real << " Imaginary: " <<setprecision(10)<< c.imag << endl;
 	return os;
 }
 
@@ -129,10 +136,17 @@ Complex Complex::operator*(const int i) {
 
 }
 Complex& Complex::operator -=(const Complex& c1 ){
+	double c1_real = c1.get_real();
+	double c1_imag = c1.get_imag();
+	real -= c1_real;
+	imag -= c1_imag;
 	return *this;
 }
 
 Complex& Complex::operator +=(const Complex&c1){
-	//return c1 + *this;
+	double c1_real = c1.get_real();
+	double c1_imag = c1.get_imag();
+	real += c1_real;
+	imag += c1_imag;
 	return *this;
 }
