@@ -3,7 +3,7 @@
 #include <string>
 #include <vector>
 
-#include "../../../class_02/src/my_code/basics.h"
+#include "../my_code/basics.h"
 
 using namespace std;
 
