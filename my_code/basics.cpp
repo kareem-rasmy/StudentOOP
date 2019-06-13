@@ -1,4 +1,4 @@
-#include "../../../class_02/src/my_code/basics.h"
+#include "basics.h"
 
 #include <iostream>
 #include <string>
