@@ -27,7 +27,7 @@ void inc_pass_ref(int& j) {
  * Use `push_back()` to fill the vector.
  * */
 void fill_vector(vector<int>& v, int n) {
-	for (int i; i <= n; i++){
+	for (int i=0; i <= n; i++){
 		v.push_back(i);
 	}
 }
@@ -36,7 +36,7 @@ void fill_vector(vector<int>& v, int n) {
  * Print all elements in a vector. Use a ranged for!
  * */
 void print_vector(const vector<int>& v) {
-	for (int i: v){
+	for (int i=0: v){
 		cout << v[i]<< endl;
 	}
 }
